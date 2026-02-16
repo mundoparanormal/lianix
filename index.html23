@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LIANIX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      font-family: Arial, sans-serif;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    .video {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+      scroll-snap-align: start;
+      position: relative;
+    }
+
+    .like {
+      position: absolute;
+      right: 20px;
+      bottom: 120px;
+      font-size: 35px;
+      cursor: pointer;
+    }
+
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+<div class="logo">LIANIX 🔥</div>
+
+<div class="video" style="background:#ff004f">
+  Video 1
+  <div class="like" onclick="like(this)">❤️</div>
+</div>
+
+<div class="video" style="background:#111">
+  Video 2
+  <div class="like" onclick="like(this)">❤️</div>
+</div>
+
+<div class="video" style="background:#0066ff">
+  Video 3
+  <div class="like" onclick="like(this)">❤️</div>
+</div>
+
+<script>
+function like(el){
+  if(el.innerHTML === "❤️"){
+    el.innerHTML = "💖";
+  } else {
+    el.innerHTML = "❤️";
+  }
+}
+</script>
+
+</body>
+</html>
